@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Roblox Lua - Charley Coding</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Charley Coding: Roblox Lua Documentation</h1>
+        <nav>
+            <a href="index.html">Back to Main Page</a>
+        </nav>
+    </header>
+
+    <section id="lua-content" class="documentation">
+        <h2>Introduction to Lua</h2>
+        <p>Lua is a lightweight, powerful, and easy-to-learn scripting language widely used in Roblox game development. Below is a comprehensive list of Lua functions, structures, and code examples to help you understand and master Lua for Roblox development.</p>
+
+        <h2>Lua Functions with Examples</h2>
+        
+        <ul>
+            <li><strong>print()</strong>: Outputs text to the console.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+<span class="token-function">print</span>(<span class="token-string">"Hello, World!"</span>)
+                </code></pre>
+            </li>
+
+            <li><strong>pairs()</strong>: Iterates through a table in no particular order.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local fruits = {apple = "red", banana = "yellow", grape = "purple"}
+for <span class="token-keyword">key</span>, <span class="token-keyword">value</span> <span class="token-keyword">in</span> <span class="token-function">pairs</span>(fruits) <span class="token-keyword">do</span>
+    <span class="token-function">print</span>(key .. <span class="token-string">": "</span> .. value)
+end
+                </code></pre>
+            </li>
+
+            <li><strong>ipairs()</strong>: Iterates through an array in order.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local numbers = {10, 20, 30}
+for i, v <span class="token-keyword">in</span> <span class="token-function">ipairs</span>(numbers) <span class="token-keyword">do</span>
+    <span class="token-function">print</span>(i .. <span class="token-string">": "</span> .. v)
+end
+                </code></pre>
+            </li>
+
+            <li><strong>tonumber()</strong>: Converts a value to a number.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local num = <span class="token-function">tonumber</span>(<span class="token-string">"10"</span>)
+<span class="token-function">print</span>(num + 5) -- Outputs 15
+                </code></pre>
+            </li>
+
+            <li><strong>tostring()</strong>: Converts a value to a string.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local str = <span class="token-function">tostring</span>(123)
+<span class="token-function">print</span>(<span class="token-string">"The number is: "</span> .. str)
+                </code></pre>
+            </li>
+
+            <li><strong>math.random()</strong>: Generates a random number.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local randomNum = <span class="token-function">math.random</span>(1, 100)
+<span class="token-function">print</span>(randomNum)
+                </code></pre>
+            </li>
+
+            <li><strong>table.insert()</strong>: Inserts a value into a table.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local myTable = {10, 20, 30}
+<span class="token-function">table.insert</span>(myTable, 40)
+<span class="token-function">print</span>(myTable[4]) -- Outputs 40
+                </code></pre>
+            </li>
+
+            <li><strong>table.remove()</strong>: Removes a value from a table.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local myTable = {10, 20, 30}
+<span class="token-function">table.remove</span>(myTable, 2)
+<span class="token-function">print</span>(myTable[2]) -- Outputs 30
+                </code></pre>
+            </li>
+
+            <li><strong>string.len()</strong>: Returns the length of a string.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local myString = <span class="token-string">"Hello, World!"</span>
+local length = <span class="token-function">string.len</span>(myString)
+<span class="token-function">print</span>(length) -- Outputs 13
+                </code></pre>
+            </li>
+
+            <li><strong>string.sub()</strong>: Returns a substring of a string.
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local myString = <span class="token-string">"Hello, World!"</span>
+local subString = <span class="token-function">string.sub</span>(myString, 1, 5)
+<span class="token-function">print</span>(subString) -- Outputs "Hello"
+                </code></pre>
+            </li>
+        </ul>
+
+        <h2>Lua Operators</h2>
+        <p>Lua supports the following operators:</p>
+        <ul>
+            <li><strong>Addition</strong> (+)
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local sum = 10 + 20
+<span class="token-function">print</span>(sum) -- Outputs 30
+                </code></pre>
+            </li>
+
+            <li><strong>Subtraction</strong> (-)
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local difference = 20 - 10
+<span class="token-function">print</span>(difference) -- Outputs 10
+                </code></pre>
+            </li>
+
+            <li><strong>Multiplication</strong> (*)
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local product = 10 * 5
+<span class="token-function">print</span>(product) -- Outputs 50
+                </code></pre>
+            </li>
+
+            <li><strong>Division</strong> (/)
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local quotient = 50 / 10
+<span class="token-function">print</span>(quotient) -- Outputs 5
+                </code></pre>
+            </li>
+
+            <li><strong>Concatenation</strong> (..)
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local message = <span class="token-string">"Hello, "</span> .. <span class="token-string">"World!"</span>
+<span class="token-function">print</span>(message) -- Outputs "Hello, World!"
+                </code></pre>
+            </li>
+        </ul>
+
+        <h2>Control Structures</h2>
+        <p>Lua provides the following control structures:</p>
+        <ul>
+            <li><strong>If-else statements</strong>
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local number = 10
+<span class="token-keyword">if</span> number == 10 <span class="token-keyword">then</span>
+    <span class="token-function">print</span>(<span class="token-string">"The number is 10."</span>)
+<span class="token-keyword">else</span>
+    <span class="token-function">print</span>(<span class="token-string">"The number is not 10."</span>)
+<span class="token-keyword">end</span>
+                </code></pre>
+            </li>
+
+            <li><strong>While loops</strong>
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+local counter = 1
+<span class="token-keyword">while</span> counter <= 5 <span class="token-keyword">do</span>
+    <span class="token-function">print</span>(counter)
+    counter = counter + 1
+<span class="token-keyword">end</span>
+                </code></pre>
+            </li>
+
+            <li><strong>For loops</strong>
+                <br><em>Example:</em>
+                <pre><code class="language-lua">
+<span class="token-keyword">for</span> i = 1, 5 <span class="token-keyword">do</span>
+    <span class="token-function">print</span>(i)
+<span class="token-keyword">end</span>
+                </code></pre>
+            </li>
+        </ul>
+
+        <h2>Tables</h2>
+        <p>Tables are the primary data structure in Lua, used to create arrays, dictionaries, and more. Here's an example of creating and manipulating tables:</p>
+        <pre><code class="language-lua">
+-- Create a table (array)
+local fruits = {<span class="token-string">"apple"</span>, <span class="token-string">"banana"</span>, <span class="token-string">"grape"</span>}
+
+-- Access elements
+<span class="token-function">print</span>(fruits[1]) -- Outputs "apple"
+
+-- Modify elements
+fruits[2] = <span class="token-string">"orange"</span>
+<span class="token-function">print</span>(fruits[2]) -- Outputs "orange"
+
+-- Insert new element
+<span class="token-function">table.insert</span>(fruits, <span class="token-string">"kiwi"</span>)
+<span class="token-function">print</span>(fruits[4]) -- Outputs "kiwi"
+        </code></pre>
+
+        <h2>Functions</h2>
+        <p>Functions are first-class values in Lua, which means they can be stored in variables, passed as arguments, and returned from other functions.</p>
+        <pre><code class="language-lua">
+-- Define a function
+<span class="token-keyword">function</span> greet(name)
+    <span class="token-function">print</span>(<span class="token-string">"Hello, "</span> .. name)
+<span class="token-keyword">end</span>
+
+-- Call the function
+greet(<span class="token-string">"Charley"</span>) -- Outputs "Hello, Charley"
+        </code></pre>
+
+        <h2>Metatables and Metamethods</h2>
+        <p>Metatables allow you to change the behavior of tables in Lua. Metamethods are special functions that handle certain operations.</p>
+        <pre><code class="language-lua">
+local myTable = {}
+
+local meta = {
+    __index = <span class="token-function">function</span>(table, key)
+        <span class="token-function">print</span>(key .. <span class="token-string">" not found!"</span>)
+    <span class="token-keyword">end</span>
+}
+
+<span class="token-function">setmetatable</span>(myTable, meta)
+
+-- Access a non-existing key
+<span class="token-function">print</span>(myTable.someKey) -- Outputs "someKey not found!"
+        </code></pre>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Charley Coding. Learn Lua the easy way!</p>
+    </footer>
+</body>
+</html>

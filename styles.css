@@ -1,0 +1,137 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+/* Navigation styling */
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Language selection section */
+#languages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.language-box {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 300px;
+}
+
+.language-box h2 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.language-box p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.language-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.language-box:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Documentation section */
+.documentation {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.documentation h2 {
+    color: #34495e;
+}
+
+.documentation pre {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+}
+
+.documentation code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #2c3e50;
+}
+
+/* Syntax highlighting */
+pre code .token-keyword {
+    color: #e74c3c; /* Red for keywords */
+}
+
+pre code .token-function {
+    color: #3498db; /* Blue for functions */
+}
+
+pre code .token-string {
+    color: #2ecc71; /* Green for strings */
+}
+
+pre code .token-comment {
+    color: #95a5a6; /* Gray for comments */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    #languages {
+        flex-direction: column;
+    }
+
+    .language-box {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
